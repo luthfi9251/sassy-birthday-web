@@ -1,38 +1,320 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Yesteryear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.App{
+  width: 100vw;
+  max-width: 450px;
+  background-color: rgba(58, 34, 49, 1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+  min-height: 800px;
+  height: 100vh;
+  max-height: 898px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.hero{
+  background: url("./images/hero-bg.jpg");
+  background-color:rgba(58, 34, 49, 0.48);
+  background-repeat: no-repeat;
+  background-size: 518px 922px;
+  background-position: -52px -13px;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+
+  position: relative;
+}
+
+.polaroid{
+  animation: swing ease-in-out 4s infinite alternate;
+  position: absolute;
+  left: 58px;
+  top: 202px;
+}
+
+.polaroid:before{
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 250px;
+  background-color: rgb(155, 165, 165);
+  z-index: 0;
+  top: -250px; left: calc(100vw/50%);
+}
+
+@keyframes swing {
+  0% { transform: rotate(3deg); }
+  33% { transform: rotate(-2deg); }
+  66% { transform: rotate(2deg); }
+  100% { transform: rotate(-3deg); }
+}
+
+.font{
+  font-family: 'Yesteryear', cursive;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.greeting{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  left: 65px;
+  top: 598px;
+}
+/*   section hero selesai */
+
+/*   section time mulai */
+
+.divider{
+  font-family: 'Delius', cursive;
+  height: 200px;
+  background-color: rgb(32, 29, 29);
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.divider-text{
+  font-size: 18px;
+  display: block;
+  color: white;
+  text-align: center;
+}
+
+.time-container{
+  display: flex;
+  justify-content:space-around ;
+}
+
+.time-item{
+  width: 80px;
+  height: 90px;
+  background-color: rgb(77, 76, 76);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number{
+  font-size: 48px;
+  display: block;
+}
+
+.label{
+  font-size: 15px;
+}
+
+
+
+/*   section time selesai */
+
+/*   section greeting mulai */
+
+.greet{
+  background: url("./images/greet-bg.jpg");
+  background-color:rgba(58, 34, 49, 0.48);
+  background-repeat: no-repeat;
+  background-size: 642px 1139px;
+  background-position: -91px -23px;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+
+  padding-top: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wishes{
+  width: 377px;
+  height: 533px;
+  background: rgba(77, 67, 67, 0.86);
+  border-radius: 10px;
+  margin-top: 30px;
+  position: relative;
+  padding: 30px 15px;
+}
+
+.wishes img{
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: -70px;
+  right: 5px;
+}
+
+.text{
+  display: block;
+  margin: 15px 0;
+}
+
+#deco1{
+  width: 225px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  position: absolute;
+  z-index: 3;
+  bottom: -80px;
+  right: -15px;
+}
+
+#deco2{
+  position: absolute;
+  bottom: 20px;
+  right: 180px;
+}
+
+#deco3{
+  position: absolute;
+  bottom: 110px;
+  left: 30px;
+}
+
+.text{
+  font-family: 'Delius', cursive;
+  font-size: 16px;
+  display: block;
+  color: white;
+  text-align: justify;
+}
+
+/* quotes start */
+
+.quotes{
+  height: 150px;
+  background-color: rgb(32, 29, 29);
+  padding: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote{
+  font-family: 'Yesteryear', cursive;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  transition: all 1s ease-in-out;
+}
+
+
+/* picture start */
+
+.picture{
+  background: url("./images/picture-bg.jpg");
+  background-color:rgba(58, 34, 49, 0.48);
+  background-repeat: no-repeat;
+  background-size: 1576px;
+  background-position: -498px 0px;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  /* overflow: hidden; */
+
+  position: relative;
+  padding: 0 0;
+
+  min-height: 100vh;
+}
+
+
+.pdeco{
+  z-index: 0;
+}
+
+#pdeco1{
+  position: absolute;
+  width: 82px;
+  height: 84px;
+  left: 13px;
+  top: 151px;
+}
+
+#pdeco2{
+  position: absolute;
+  width: 115px;
+  height: 98px;
+  left: 298px;
+  bottom: 5px;
+}
+
+#pdeco3{
+  position: absolute;
+  width: 149px;
+  height: 107px;
+  left: -5px;
+  top: 649px;
+}
+
+#pdeco4{
+  position: absolute;
+  width: 135px;
+  height: 113px;
+  left: 282px;
+  top: 401px;  
+}
+
+.wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pict-cont{
+  width: 299px;
+  height: 383px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.image{
+  width: 299px;
+  height: 383px;
+  padding: 17px 19px;
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+}
+
+.image img{
+  width: 100%;
+  height: 95%;
+  object-fit: cover;
+}
+
+.back{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.front{
+}
+
+.wadah{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.capt-text{
+  font-family: "'Delius', cursive";
+  font-size: 14px;
+  text-align: center;
+  display: block;
 }
