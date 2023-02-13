@@ -165,7 +165,8 @@
 }
 
 #deco1{
-  width: 225px;
+  max-width: 225px;
+  overflow: hidden;
   transform: matrix(-1, 0, 0, 1, 0, 0);
   position: absolute;
   z-index: 3;
@@ -224,7 +225,7 @@
   background-position: -498px 0px;
   background-blend-mode: multiply;
   background-attachment: fixed;
-  /* overflow: hidden; */
+  overflow: hidden;
 
   position: relative;
   padding: 0 0;
